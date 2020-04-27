@@ -6,7 +6,7 @@
   <link href="/my_blog/atom.xml" rel="self"/>
   
   <link href="https://uniqueimaginate.github.io/my_blog/"/>
-  <updated>2020-04-27T16:08:55.077Z</updated>
+  <updated>2020-04-27T16:23:49.276Z</updated>
   <id>https://uniqueimaginate.github.io/my_blog/</id>
   
   <author>
@@ -17,24 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://uniqueimaginate.github.io/my_blog/2020/04/27/hello-world/"/>
-    <id>https://uniqueimaginate.github.io/my_blog/2020/04/27/hello-world/</id>
-    <published>2020-04-27T16:08:55.077Z</published>
-    <updated>2020-04-27T16:08:55.077Z</updated>
+    <title>My first blog</title>
+    <link href="https://uniqueimaginate.github.io/my_blog/2020/04/27/My-first-blog/"/>
+    <id>https://uniqueimaginate.github.io/my_blog/2020/04/27/My-first-blog/</id>
+    <published>2020-04-27T16:11:29.000Z</published>
+    <updated>2020-04-27T16:23:49.276Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="첫-포스팅"><a href="#첫-포스팅" class="headerlink" title="첫 포스팅"></a>첫 포스팅</h2><p>감격스러운 첫 포스팅이다.</p><a id="more"></a><p>원래 jekyll 로 간단한 블로그를 만들려고 하다가 너무 뻔한 것 같아서 새로운 것을 시작해보았다. 물론 jekyll 로 블로그를 만들어 볼 시도 조차도 하지 않아서 감히 뻔하다고 할 수는 없지만, 너무 흔해서 피하고 싶었다.</p><p>그래서 시도한 것이 Hexo. 이름부터 XOXO 느낌이 나서 선택하게 되었다. </p><p>그렇다. 이 블로그는 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 라는 플랫폼 위에서 작성 되었으며  <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">Github pages</a>  를 통해서 deploy 되었다. </p><p>단순한 디자인의 <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="noopener">apollo</a> theme을 선택하였다. </p><p>다음 포스팅에서 어떻게 블로그를 만들었으며, Travis CI 와 Github를 어떻게 연동하는 포스트를 작성해 보겠다.</p><p>아마 이 후에는 CI/CD 에 대해 공부한 후에 포스팅 해보지 않을까 싶다. 배포하는데 이렇게나 편하다니..</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;h2 id=&quot;첫-포스팅&quot;&gt;&lt;a href=&quot;#첫-포스팅&quot; class=&quot;headerlink&quot; title=&quot;첫 포스팅&quot;&gt;&lt;/a&gt;첫 포스팅&lt;/h2&gt;&lt;p&gt;감격스러운 첫 포스팅이다.&lt;/p&gt;
     
     </summary>
     
     
+    
+      <category term="first_post" scheme="https://uniqueimaginate.github.io/my_blog/tags/first-post/"/>
     
   </entry>
   

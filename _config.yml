@@ -8,13 +8,13 @@ subtitle:
 description: uniqueimaginate's personal blog
 keywords: tech, hexo
 author: Donguk Lee
-language: kr/en
+language: en
 timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://uniqueimagiante.github.io/my_blog
-root: /
+url: https://uniqueimaginate.github.io/my_blog
+root: /my_blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,7 +101,7 @@ deploy:
   type: ''
 
 active_generator:
-    per_page: 0
-    yearly: false
-    montly: false
-    daily: false
+  per_page: 0
+  yearly: false
+  montly: false
+  daily: false

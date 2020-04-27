@@ -13,8 +13,8 @@ disqus:
 duoshuo:
 
 # Analytics
-# google-analytics:
-# ga: UA-xxxxxxxx-x
+google-analytics:
+    ga: UA-164717783-1
 
 # Copyright Infomation
 startyear: 2020

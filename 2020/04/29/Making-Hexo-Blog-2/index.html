@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Making Hexo Blog #2 · Peter's Blog</title><meta name="description" content="Making Hexo Blog #2 - Donguk Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/my_blog/favicon.png"><link rel="stylesheet" href="/my_blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://uniqueimaginate.github.io/my_blog/atom.xml" title="Peter's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/my_blog/atom.xml" title="Peter's Blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/my_blog/" class="logo-link"><img src="/my_blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/my_blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/my_blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/uniqueimaginate" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/my_blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Making Hexo Blog #2</h1><div class="post-info">Apr 29, 2020</div><div class="post-content"><h1 id="Hexo-Blog-만들기-2"><a href="#Hexo-Blog-만들기-2" class="headerlink" title="Hexo Blog 만들기 # 2"></a>Hexo Blog 만들기 # 2</h1><h2 id="Hexo-블로그에-테마-적용하기"><a href="#Hexo-블로그에-테마-적용하기" class="headerlink" title="Hexo 블로그에 테마 적용하기"></a>Hexo 블로그에 테마 적용하기</h2><a id="more"></a>
+
+<p>먼저 hexo 를 설치하면 default theme 가 설치 되어 있습니다.<br>그러나 이번 포스트는 테마를 바꾸는 방법에 대해 설명하겠습니다.</p>
+<ol>
+<li><p>먼저 고르려고 하는 테마를 고릅니다.<br> 저 같은 경우에는 <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="noopener">apollo</a> 테마를 선택하였습니다.</p>
+</li>
+<li><p>각 테마마다 요구하는 npm package 가 있습니다. 저의 경우는 다음과 같습니다.</p>
+<pre><code>npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive
+</code></pre>
+</li>
+<li><p>그 다음 테마가 담긴 폴더를 clone 합니다.</p>
+<pre><code>git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo</code></pre>
+</li>
+<li><p>Hexo 를 local 에서 보고 싶다면    </p>
+<p> <code>hexo server</code>     </p>
+<p> 이제 local host 에서 볼 수 있습니다.</p>
+<p> <img src="../../../../images/hexo_server.png" alt="hexo_server">(Mac zsh)</p>
+</li>
+</ol>
+<p>잘 따라왔다면 local 에서 error 가 날 가능성은 딱히 없을 것이라 생각됩니다.<br>만약 error가 생긴다면 clone 한 theme 폴더에서 문제가 생겼을 가능성이 높습니다.<br>이 때, 테마 폴더로 가서 <code>npm install</code> 을 해보세요.</p>
+<p>여기까지 로컬 환경에서의 Hexo setting 입니다.<br>다음은 git 과 github pages, Travis CI 를 이용한 배포 포스팅을 진행하겠습니다.</p>
+</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/04/29/Making-Hexo-Blog-1/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
+var disqus_identifier = '2020/04/29/Making-Hexo-Blog-2/';
+var disqus_title = 'Making Hexo Blog #2';
+var disqus_url = 'https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-2/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//https-uniqueimaginate-github-io-my-blog.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://uniqueimaginate.github.io/my_blog">Donguk Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-164717783-1"></script>
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-164717783-1');
+
+</script></body></html>

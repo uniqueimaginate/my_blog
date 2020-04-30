@@ -6,7 +6,7 @@
   <link href="/my_blog/atom.xml" rel="self"/>
   
   <link href="https://uniqueimaginate.github.io/my_blog/"/>
-  <updated>2020-04-30T07:53:22.628Z</updated>
+  <updated>2020-04-30T12:18:51.395Z</updated>
   <id>https://uniqueimaginate.github.io/my_blog/</id>
   
   <author>
@@ -17,23 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Making Hexo Blog #1</title>
-    <link href="https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-1/"/>
-    <id>https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-1/</id>
-    <published>2020-04-29T07:40:55.000Z</published>
-    <updated>2020-04-30T07:53:22.628Z</updated>
+    <title>Making Hexo Blog #2</title>
+    <link href="https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-2/"/>
+    <id>https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-2/</id>
+    <published>2020-04-29T14:28:09.000Z</published>
+    <updated>2020-04-30T12:18:51.395Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Hexo-Blog-만들기-1"><a href="#Hexo-Blog-만들기-1" class="headerlink" title="Hexo Blog 만들기 # 1"></a>Hexo Blog 만들기 # 1</h2><p>Hexo 플랫폼을 이용해 만든 블로그입니다.</p><a id="more"></a><ol><li>Node.js 와 git 을 각자의 OS 에 맞게 설치를 합니다.<ul><li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 설치 (버전은 10.0 이상을 권장합니다.)</a></li><li><a href="https://git-scm.com/" target="_blank" rel="noopener">git 설치</a></li></ul></li><li>Hexo 를 설치합니다.    <pre><code>npm install hexo</code></pre></li><li>이제 hexo 를 사용하면 됩니다.<br> <code>npx hexo &lt;command> </code><br> 리눅스 유저는 다음과 같이 경로 설정을 하면 됩니다. <pre><code>     echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile </code></pre> 경로 설정을 하면 다음과 같이 사용할 수 있습니다<br> <code>hexo &lt;command></code></li></ol><p>더 자세한 설명은 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Doc</a>에서 볼 수 있습니다.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-Blog-만들기-2"><a href="#Hexo-Blog-만들기-2" class="headerlink" title="Hexo Blog 만들기 # 2"></a>Hexo Blog 만들기 # 2</h1><h2 id="Hexo-블로그에-테마-적용하기"><a href="#Hexo-블로그에-테마-적용하기" class="headerlink" title="Hexo 블로그에 테마 적용하기"></a>Hexo 블로그에 테마 적용하기</h2><a id="more"></a><p>먼저 hexo 를 설치하면 default theme 가 설치 되어 있습니다.<br>그러나 이번 포스트는 테마를 바꾸는 방법에 대해 설명하겠습니다.</p><ol><li><p>먼저 고르려고 하는 테마를 고릅니다.<br> 저 같은 경우에는 <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="noopener">apollo</a> 테마를 선택하였습니다.</p></li><li><p>각 테마마다 요구하는 npm package 가 있습니다. 저의 경우는 다음과 같습니다.</p><pre><code>npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</code></pre></li><li><p>그 다음 테마가 담긴 폴더를 clone 합니다.</p><pre><code>git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo</code></pre></li><li><p>Hexo 를 local 에서 보고 싶다면    </p><p> <code>hexo server</code>     </p><p> 이제 local host 에서 볼 수 있습니다.</p><p> <img src="../../../../images/hexo_server.png" alt="hexo_server">(Mac zsh)</p></li></ol><p>잘 따라왔다면 local 에서 error 가 날 가능성은 딱히 없을 것이라 생각됩니다.<br>만약 error가 생긴다면 clone 한 theme 폴더에서 문제가 생겼을 가능성이 높습니다.<br>이 때, 테마 폴더로 가서 <code>npm install</code> 을 해보세요.</p><p>여기까지 로컬 환경에서의 Hexo setting 입니다.<br>다음은 git 과 github pages, Travis CI 를 이용한 배포 포스팅을 진행하겠습니다.</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Hexo-Blog-만들기-1&quot;&gt;&lt;a href=&quot;#Hexo-Blog-만들기-1&quot; class=&quot;headerlink&quot; title=&quot;Hexo Blog 만들기 # 1&quot;&gt;&lt;/a&gt;Hexo Blog 만들기 # 1&lt;/h2&gt;&lt;p&gt;Hexo 플랫폼을 이용해 만든 블로그입니다.&lt;/p&gt;
+      &lt;h1 id=&quot;Hexo-Blog-만들기-2&quot;&gt;&lt;a href=&quot;#Hexo-Blog-만들기-2&quot; class=&quot;headerlink&quot; title=&quot;Hexo Blog 만들기 # 2&quot;&gt;&lt;/a&gt;Hexo Blog 만들기 # 2&lt;/h1&gt;&lt;h2 id=&quot;Hexo-블로그에-테마-적용하기&quot;&gt;&lt;a href=&quot;#Hexo-블로그에-테마-적용하기&quot; class=&quot;headerlink&quot; title=&quot;Hexo 블로그에 테마 적용하기&quot;&gt;&lt;/a&gt;Hexo 블로그에 테마 적용하기&lt;/h2&gt;
     
     </summary>
     
     
     
-      <category term="hexo" scheme="https://uniqueimaginate.github.io/my_blog/tags/hexo/"/>
+      <category term="hexo, blog, github pages" scheme="https://uniqueimaginate.github.io/my_blog/tags/hexo-blog-github-pages/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Making Hexo Blog #1</title>
+    <link href="https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-1/"/>
+    <id>https://uniqueimaginate.github.io/my_blog/2020/04/29/Making-Hexo-Blog-1/</id>
+    <published>2020-04-29T07:40:55.000Z</published>
+    <updated>2020-04-30T12:18:51.395Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-Blog-만들기-1"><a href="#Hexo-Blog-만들기-1" class="headerlink" title="Hexo Blog 만들기 # 1"></a>Hexo Blog 만들기 # 1</h1><h2 id="Hexo-플랫폼을-이용해-만든-블로그입니다"><a href="#Hexo-플랫폼을-이용해-만든-블로그입니다" class="headerlink" title="Hexo 플랫폼을 이용해 만든 블로그입니다."></a>Hexo 플랫폼을 이용해 만든 블로그입니다.</h2><a id="more"></a><ol><li><p>Node.js 와 git 을 각자의 OS 에 맞게 설치를 합니다.</p><ul><li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 설치 (버전은 10.0 이상을 권장합니다.)</a></li><li><a href="https://git-scm.com/" target="_blank" rel="noopener">git 설치</a></li></ul></li><li><p>Hexo 를 설치합니다.    </p><p> <code>npm install hexo</code>    </p></li><li><p>이제 hexo 를 사용하면 됩니다.    </p><p> <code>npx hexo &lt;command> </code>    </p><p> 리눅스 유저는 다음과 같이 경로 설정을 하면 됩니다.    </p><p> <code>echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile</code></p><p> 경로 설정을 하면 다음과 같이 사용할 수 있습니다      </p><p> <code>hexo &lt;command></code></p></li></ol><p>ex) Hexo 로 새로운 post 를 만드는 코드    </p><pre><code>&lt;code&gt;hexo new &apos;post 이름&apos;&lt;/code&gt;</code></pre><p>더 자세한 설명은 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Doc</a>에서 볼 수 있습니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Hexo-Blog-만들기-1&quot;&gt;&lt;a href=&quot;#Hexo-Blog-만들기-1&quot; class=&quot;headerlink&quot; title=&quot;Hexo Blog 만들기 # 1&quot;&gt;&lt;/a&gt;Hexo Blog 만들기 # 1&lt;/h1&gt;&lt;h2 id=&quot;Hexo-플랫폼을-이용해-만든-블로그입니다&quot;&gt;&lt;a href=&quot;#Hexo-플랫폼을-이용해-만든-블로그입니다&quot; class=&quot;headerlink&quot; title=&quot;Hexo 플랫폼을 이용해 만든 블로그입니다.&quot;&gt;&lt;/a&gt;Hexo 플랫폼을 이용해 만든 블로그입니다.&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="hexo, blog" scheme="https://uniqueimaginate.github.io/my_blog/tags/hexo-blog/"/>
     
   </entry>
   
@@ -42,7 +63,7 @@
     <link href="https://uniqueimaginate.github.io/my_blog/2020/04/27/My-first-blog/"/>
     <id>https://uniqueimaginate.github.io/my_blog/2020/04/27/My-first-blog/</id>
     <published>2020-04-27T16:11:29.000Z</published>
-    <updated>2020-04-30T07:53:22.628Z</updated>
+    <updated>2020-04-30T12:18:51.395Z</updated>
     
     <content type="html"><![CDATA[<h2 id="첫-포스팅"><a href="#첫-포스팅" class="headerlink" title="첫 포스팅"></a>첫 포스팅</h2><p>감격스러운 첫 포스팅이다.</p><a id="more"></a><p>원래 jekyll 로 간단한 블로그를 만들려고 하다가 너무 뻔한 것 같아서 새로운 것을 시작해보았다. 물론 jekyll 로 블로그를 만들어 볼 시도 조차도 하지 않아서 감히 뻔하다고 할 수는 없지만, 너무 흔해서 피하고 싶었다.</p><p>그래서 시도한 것이 Hexo. 이름부터 XOXO 느낌이 나서 선택하게 되었다. </p><p>그렇다. 이 블로그는 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 라는 플랫폼 위에서 작성 되었으며  <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">Github pages</a>  를 통해서 deploy 되었다. </p><p>단순한 디자인의 <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="noopener">apollo</a> theme을 선택하였다. </p><p>다음 포스팅에서 어떻게 블로그를 만들었으며, Travis CI 와 Github를 어떻게 연동하는 포스트를 작성해 보겠다.</p><p>아마 이 후에는 CI/CD 에 대해 공부한 후에 포스팅 해보지 않을까 싶다. 배포하는데 이렇게나 편하다니..</p>]]></content>
     

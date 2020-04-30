@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/pinggod/hexo-theme-apollo#readme",
   "devDependencies": {
+    "clean-css": "^4.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-sass": "^4.1.0",

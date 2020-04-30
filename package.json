@@ -25,5 +25,9 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0"
+  },
+  "devDependencies": {
+    "clean-css": "^4.2.3",
+    "minimist": "^1.2.5"
   }
 }

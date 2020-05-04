@@ -5,7 +5,7 @@ tags: Blog, Hexo, Google analytics, Google search
 ---
 # Heo Blog 만들기 # 4
 
-## Hexo 블로그를 Google Analytics
+## Hexo 블로그를 Google Analytics 에 등록하기
 
 <!-- more -->
 
@@ -16,10 +16,11 @@ tags: Blog, Hexo, Google analytics, Google search
 
 1. 먼저 Google Analytics 가입부터 진행합니다.
 2. 설정 창으로 이동합니다. 왼쪽 아래에 톱니바퀴를 누르시면 됩니다.
-3. 다음의 과정을 진행합니다{% asset_img 1.jpg %}
-4. {% asset_img 2.jpg %}
-5. 양식에 맞게 작성해줍니다.{% asset_img 3.png %}
-6. 다 마무리 하면 다음과 같은 창이 나오게 됩니다. 검은 색 칠이 된 것은 본인만 알고 있으면 됩니다.{% asset_img 4.jpg %} 여기서 트래킹 ID 를 복사해 두시면 됩니다.
+3. Create Account 를 누릅니다.
+4. 다음의 과정을 진행합니다{% asset_img 1.jpg %}
+5. {% asset_img 2.jpg %}
+6. 양식에 맞게 작성해줍니다.{% asset_img 3.png %}
+7. 다 마무리 하면 다음과 같은 창이 나오게 됩니다. 검은 색 칠이 된 부분은 본인만 알고 있으면 됩니다.{% asset_img 4.jpg %} 여기서 트래킹 ID 를 복사해 두시면 됩니다.
 
 ### Google Analytics 를 Hexo에 적용
 1. 각자의 테마에서 Google Analytics 를 지원해주는 경우

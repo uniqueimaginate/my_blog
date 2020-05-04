@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Making Hexo Blog #3 · Peter's Blog</title><meta name="description" content="Making Hexo Blog #3 - Donguk Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/my_blog/favicon.png"><link rel="stylesheet" href="/my_blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://uniqueimaginate.github.io/my_blog/atom.xml" title="Peter's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/my_blog/atom.xml" title="Peter's Blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/my_blog/" class="logo-link"><img src="/my_blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/my_blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/my_blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/uniqueimaginate" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/my_blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Making Hexo Blog #3</h1><div class="post-info">May 4, 2020</div><div class="post-content"><h1 id="Heo-Blog-만들기-3"><a href="#Heo-Blog-만들기-3" class="headerlink" title="Heo Blog 만들기 # 3"></a>Heo Blog 만들기 # 3</h1><h2 id="Hexo-블로그를-github-pages-를-통해서-배포하기"><a href="#Hexo-블로그를-github-pages-를-통해서-배포하기" class="headerlink" title="Hexo 블로그를 github pages 를 통해서 배포하기"></a>Hexo 블로그를 github pages 를 통해서 배포하기</h2><a id="more"></a>
+
+<h4 id="Github-에서-repository-만들기"><a href="#Github-에서-repository-만들기" class="headerlink" title="Github 에서 repository 만들기"></a>Github 에서 repository 만들기</h4><p>먼저 이 포스팅은 &lt;사용자id&gt;.github.io 를 만드는 포스팅이 아니라는 점을 명시하고 시작하고자 합니다. 이유는 저와 같은 personal 이용자들은 Github Pages 가 오직 master branch 를 통해서만 deploy 됩니다.</p>
+<p>그러나 아래의 그림과 같이 &lt;사용자id&gt;.github.io 라고 이름을 짓지 않고 프로젝트 이름을 넣어준다면 master branch 가 아닌 다른 branch 를 source 로 설정하게 될 수 있게됩니다. (이 부분에서 막혀서 꽤나 헤맸습니다. ㅠ)</p>
+<img src="/my_blog/2020/05/04/Making-Hexo-Blog-3/name.png" class="">
+<img src="/my_blog/2020/05/04/Making-Hexo-Blog-3/source_branch.png" class="">
+
+<p>여기까지 완성 후에 이제 local 에 만든 Hexo 폴더를 github 로 push 해줍니다.</p>
+<hr>
+
+<h3 id="Travis-CI-와-연동하기"><a href="#Travis-CI-와-연동하기" class="headerlink" title="Travis CI 와 연동하기"></a>Travis CI 와 연동하기</h3><ol>
+<li><p>Github 계정과 Travis CI 를 연동합니다. 다음의 링크로 가셔서 연동하면 됩니다.<br><a href="https://github.com/marketplace/travis-ci" target="_blank" rel="noopener">Travis CI 연동하기</a></p>
+</li>
+<li><p>그 다음 <a href="https://github.com/settings/installations" target="_blank" rel="noopener">Application Setting</a> 으로 가서 Travis CI 가 만들어 놓은 repository 와 연동되게끔 설정해 줍니다. 저와 같은 경우 다음과 같이 되어 있습니다.</p>
+<img src="/my_blog/2020/05/04/Making-Hexo-Blog-3/TravisCI.png" class="">
+</li>
+<li><p>이제 여러분의 repository 토큰을 새로 만들어야 합니다.<br><a href="https://github.com/settings/tokens" target="_blank" rel="noopener">토큰 만들기</a> &lt;- 여기로 가셔서 Generate new token 을 누르시면 됩니다.</p>
+<img src="/my_blog/2020/05/04/Making-Hexo-Blog-3/token.png" class="">
+<p> <b>위의 사진과 같이 scope 는 repo 만 선택하시면 됩니다.</b></p>
+</li>
+<li><p>Generate token 을 하면 토큰이 번호+문자 조합으로 나옵니다. 이 것을 복사해둡시다.</p>
+</li>
+<li><p>이제 Travis page 로 갑니다.</p>
+</li>
+<li><p>해당 repo 의 Setting 에 가게 되면 Environment Variables 가 나옵니다. 여기서 Name에 GH_TOKEN 이라 적고, Value 값으로 복사해둔 토큰을 적고 Add 를 누릅니다.</p>
+</li>
+<li><p>이제 local 에 있는 각자의 Hexo 폴더로 가면 _config.yml 과 package.json 이 있을 겁니다. 그 폴더에 다음의 .travis.yml 파일을 저장합니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sudo:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10</span> <span class="comment"># use nodejs v10 LTS</span></span><br><span class="line"><span class="attr">cache:</span> <span class="string">npm</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span> <span class="comment"># build master branch only</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span> <span class="comment"># generate static files</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github-token:</span> <span class="string">$GH_TOKEN</span></span><br><span class="line">  <span class="attr">keep-history:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">local-dir:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Travis CI 가 배포를 마무리 한다면, gh-pages branch에 만들어진 page 가 보입니다.</p>
+</li>
+<li><p>만들어준 repo 의 setting 으로 가게 된다면 이번 포스팅의 앞부분에서 보인 이미지 처럼 source 를 gh_pages branch 로 변경해야 합니다.</p>
+</li>
+<li><p>마지막으로 local 에 있는 _config.yml 파일에서 root: 값을 만들어둔 레포의 이름으로 만듭니다. 저의 경우 아래와 같습니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://uniqueimaginate.github.io/my_blog</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/my_blog</span></span><br></pre></td></tr></table></figure></li>
+<li><p>이제 local 에 있는 모든 파일을 github로 푸시한 뒤에 약간의 시간이 흐른 후 &lt;사용자id&gt;.github.io/<repo name> 으로 접속해봅시다.</p>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/04/29/Making-Hexo-Blog-2/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
+var disqus_identifier = '2020/05/04/Making-Hexo-Blog-3/';
+var disqus_title = 'Making Hexo Blog #3';
+var disqus_url = 'https://uniqueimaginate.github.io/my_blog/2020/05/04/Making-Hexo-Blog-3/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//https-uniqueimaginate-github-io-my-blog.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://uniqueimaginate.github.io/my_blog">Donguk Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-164717783-1"></script>
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-164717783-1');
+
+</script></body></html>

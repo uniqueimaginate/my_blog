@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="google-site-verification" content="xlKuwmUQsRwBTF8DTvKVwzOhGqqQq3W-hXCzC9YdCnQ"><title> Making Hexo Blog #4 · Peter's Blog</title><meta name="description" content="Making Hexo Blog #4 - Donguk Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/my_blog/favicon.png"><link rel="stylesheet" href="/my_blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://uniqueimaginate.github.io/my_blog/atom.xml" title="Peter's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/my_blog/atom.xml" title="Peter's Blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/my_blog/" class="logo-link"><img src="/my_blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/my_blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/my_blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/uniqueimaginate" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/my_blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Making Hexo Blog #4</h1><div class="post-info">May 4, 2020</div><div class="post-content"><h1 id="Heo-Blog-만들기-4"><a href="#Heo-Blog-만들기-4" class="headerlink" title="Heo Blog 만들기 # 4"></a>Heo Blog 만들기 # 4</h1><h2 id="Hexo-블로그를-Google-Analytics"><a href="#Hexo-블로그를-Google-Analytics" class="headerlink" title="Hexo 블로그를 Google Analytics"></a>Hexo 블로그를 Google Analytics</h2><a id="more"></a>
+
+<p>저의 테마인 apollo 를 기준으로 설명합니다.<br><br></p>
+<h3 id="Google-Analytics-가입"><a href="#Google-Analytics-가입" class="headerlink" title="Google Analytics 가입"></a>Google Analytics 가입</h3><ol>
+<li>먼저 Google Analytics 가입부터 진행합니다.</li>
+<li>설정 창으로 이동합니다. 왼쪽 아래에 톱니바퀴를 누르시면 됩니다.</li>
+<li>다음의 과정을 진행합니다<img src="/my_blog/2020/05/04/Making-Hexo-Blog-4/1.jpg" class=""></li>
+<li><img src="/my_blog/2020/05/04/Making-Hexo-Blog-4/2.jpg" class=""></li>
+<li>양식에 맞게 작성해줍니다.<img src="/my_blog/2020/05/04/Making-Hexo-Blog-4/3.png" class=""></li>
+<li>다 마무리 하면 다음과 같은 창이 나오게 됩니다. 검은 색 칠이 된 것은 본인만 알고 있으면 됩니다.<img src="/my_blog/2020/05/04/Making-Hexo-Blog-4/4.jpg" class=""> 여기서 트래킹 ID 를 복사해 두시면 됩니다.</li>
+</ol>
+<h3 id="Google-Analytics-를-Hexo에-적용"><a href="#Google-Analytics-를-Hexo에-적용" class="headerlink" title="Google Analytics 를 Hexo에 적용"></a>Google Analytics 를 Hexo에 적용</h3><ol>
+<li>각자의 테마에서 Google Analytics 를 지원해주는 경우<ol>
+<li>Hexo 폴더에서 theme 폴더에 들어간 후, 자신이 사용중인 테마 폴더로 들어갑니다.</li>
+<li>_config.yml 파일을 봅니다. (Hexo 폴더에도 _config.yml 파일이 있습니다. 헷갈리면 안됩니다.)</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Analytics</span></span><br><span class="line"></span><br><span class="line"><span class="attr">ga:</span> <span class="string">UA-*********-*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 또는 </span></span><br><span class="line"></span><br><span class="line"><span class="attr">Google Analytics:</span> <span class="string">UA-*********-*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 별 표시 된 부분을, 위에서 얻은 트래킹 ID 를 바꾸어 주면 자동으로 연동 된다.</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>각자의 테마에서 Google Analytics 를 지원해주지 않는 경우</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;- Google analytics</span><br><span class="line">script(async src&#x3D;&quot;https:&#x2F;&#x2F;www.googletagmanager.com&#x2F;gtag&#x2F;js?id&#x3D;UA-*********-*&quot;)</span><br><span class="line"></span><br><span class="line">script.</span><br><span class="line">    window.dataLayer &#x3D; window.dataLayer || [];</span><br><span class="line">    function gtag()&#123;dataLayer.push(arguments);&#125;</span><br><span class="line">    gtag(&#39;js&#39;, new Date());</span><br><span class="line"></span><br><span class="line">    gtag(&#39;config&#39;, &#39;UA-*********-*&#39;);</span><br></pre></td></tr></table></figure>
+<p>위의 code 는 Google Analytics 에서 제공하는 gtag.js 이다. Google Analytics 가입 6번 그림에서 나온 코드를 Jade 문법으로 살짝 바꾼 코드이다. 이 code 를 테마 폴더 안에 partial 폴더 안에 있는 scripts.jade 파일에 붙힌다.<br><b>여기서 자신의 트래킹 코드를 별 표시 되어 있는 code 를 대체해야 한다.</b></p>
+<p>이제 Google Analytics 연동은 끝났다. 보통 Hexo theme 은 Jade 이거나 Pub 파일일 것이다. 크게 다르지 않을 것이나, 각자의 문법에 맞게 작성하면 연동은 무리 없이 잘 될 것이다.</p>
+<p>다음 포스팅은 이제 Google Search 에 등록하는 법을 알아보겠습니다. </p>
+</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/05/04/Making-Hexo-Blog-3/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
+var disqus_identifier = '2020/05/04/Making-Hexo-Blog-4/';
+var disqus_title = 'Making Hexo Blog #4';
+var disqus_url = 'https://uniqueimaginate.github.io/my_blog/2020/05/04/Making-Hexo-Blog-4/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//https-uniqueimaginate-github-io-my-blog.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://uniqueimaginate.github.io/my_blog">Donguk Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-164717783-1"></script>
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-164717783-1');
+
+</script></body></html>

@@ -3,7 +3,7 @@ title: 'Making Hexo Blog #5'
 date: 2020-05-05 00:57:03
 tags: Hexo, Blog, Google Search
 ---
-# Heo Blog 만들기 # 5
+# Hexo Blog 만들기 # 5
 
 ## Hexo 블로그를 Google Search 에 등록하기
 

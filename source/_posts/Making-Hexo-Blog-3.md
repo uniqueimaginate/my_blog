@@ -3,7 +3,7 @@ title: 'Making Hexo Blog #3'
 date: 2020-05-04 11:44:39
 tags: Github pages, Travis CI, deploy
 ---
-# Heo Blog 만들기 # 3
+# Hexo Blog 만들기 # 3
 
 ## Hexo 블로그를 github pages 를 통해서 배포하기
 

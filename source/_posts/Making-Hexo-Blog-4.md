@@ -3,7 +3,7 @@ title: 'Making Hexo Blog #4'
 date: 2020-05-04 23:35:57
 tags: Blog, Hexo, Google analytics, Google search
 ---
-# Heo Blog 만들기 # 4
+# Hexo Blog 만들기 # 4
 
 ## Hexo 블로그를 Google Analytics 에 등록하기
 

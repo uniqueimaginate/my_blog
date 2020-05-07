@@ -24,10 +24,10 @@
 <li>각자의 테마에서 Google Analytics 를 지원해주지 않는 경우</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;- Google analytics</span><br><span class="line">script(async src&#x3D;&quot;https:&#x2F;&#x2F;www.googletagmanager.com&#x2F;gtag&#x2F;js?id&#x3D;UA-*********-*&quot;)</span><br><span class="line"></span><br><span class="line">script.</span><br><span class="line">    window.dataLayer &#x3D; window.dataLayer || [];</span><br><span class="line">    function gtag()&#123;dataLayer.push(arguments);&#125;</span><br><span class="line">    gtag(&#39;js&#39;, new Date());</span><br><span class="line"></span><br><span class="line">    gtag(&#39;config&#39;, &#39;UA-*********-*&#39;);</span><br></pre></td></tr></table></figure>
-<p>위의 code 는 Google Analytics 에서 제공하는 gtag.js 이다. Google Analytics 가입 6번 그림에서 나온 코드를 Jade 문법으로 살짝 바꾼 코드이다. 이 code 를 테마 폴더 안에 partial 폴더 안에 있는 scripts.jade 파일에 붙힌다.<br><b>여기서 자신의 트래킹 코드를 별 표시 되어 있는 code 를 대체해야 한다.</b></p>
-<p>이제 Google Analytics 연동은 끝났다. 보통 Hexo theme 은 Jade 이거나 Pub 파일일 것이다. 크게 다르지 않을 것이나, 각자의 문법에 맞게 작성하면 연동은 무리 없이 잘 될 것이다.</p>
+<p>위의 code 는 Google Analytics 에서 제공하는 gtag.js 입니다. Google Analytics 가입 6번 그림에서 나온 코드를 Jade 문법으로 살짝 바꾼 코드입니다. 이 code 를 테마 폴더 안에 partial 폴더 안에 있는 scripts.jade 파일에 붙힙니다.<br><b>여기서 자신의 트래킹 코드를 별 표시 되어 있는 code 를 대체해야 합니다.</b></p>
+<p>이제 Google Analytics 연동은 끝났습니다. 보통 Hexo theme 은 Jade 이거나 Pub 파일일 것입니다. 크게 다르지 않을 것이나, 각자의 문법에 맞게 작성하면 연동은 무리 없이 잘 될 것입니다.</p>
 <p>다음 포스팅은 이제 Google Search 에 등록하는 법을 알아보겠습니다. </p>
-</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/05/04/Making-Hexo-Blog-5/" class="prev">PREV</a><a href="/my_blog/2020/05/04/Making-Hexo-Blog-3/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
+</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/05/04/Making-Hexo-Blog-5/" class="prev">PREV</a><a href="/my_blog/2020/05/04/NodeJS-1/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
 var disqus_identifier = '2020/05/04/Making-Hexo-Blog-4/';
 var disqus_title = 'Making Hexo Blog #4';
 var disqus_url = 'https://uniqueimaginate.github.io/my_blog/2020/05/04/Making-Hexo-Blog-4/';

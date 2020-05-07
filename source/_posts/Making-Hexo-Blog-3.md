@@ -65,5 +65,6 @@ deploy:
 url: https://uniqueimaginate.github.io/my_blog
 root: /my_blog
 ```
-11. 이제 local 에 있는 모든 파일을 github로 푸시한 뒤에 약간의 시간이 흐른 후 <사용자id>.github.io/<repo name> 으로 접속해봅시다.
+11. 이제 local 에 있는 모든 파일을 github로 푸시한 뒤에 약간의 시간이 흐른 후 <사용자id>.github.io/{repo name} 으로 접속해봅시다.
+ex) [uniqueimaginate.github.io/my_blog](https://uniqueimaginate.github.io/my_blog)
 

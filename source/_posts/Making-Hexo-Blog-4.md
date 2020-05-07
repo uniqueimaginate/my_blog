@@ -54,9 +54,9 @@ script.
 
     gtag('config', 'UA-*********-*');
 ```
-위의 code 는 Google Analytics 에서 제공하는 gtag.js 이다. Google Analytics 가입 6번 그림에서 나온 코드를 Jade 문법으로 살짝 바꾼 코드이다. 이 code 를 테마 폴더 안에 partial 폴더 안에 있는 scripts.jade 파일에 붙힌다.
-<b>여기서 자신의 트래킹 코드를 별 표시 되어 있는 code 를 대체해야 한다.</b>
+위의 code 는 Google Analytics 에서 제공하는 gtag.js 입니다. Google Analytics 가입 6번 그림에서 나온 코드를 Jade 문법으로 살짝 바꾼 코드입니다. 이 code 를 테마 폴더 안에 partial 폴더 안에 있는 scripts.jade 파일에 붙힙니다.
+<b>여기서 자신의 트래킹 코드를 별 표시 되어 있는 code 를 대체해야 합니다.</b>
 
-이제 Google Analytics 연동은 끝났다. 보통 Hexo theme 은 Jade 이거나 Pub 파일일 것이다. 크게 다르지 않을 것이나, 각자의 문법에 맞게 작성하면 연동은 무리 없이 잘 될 것이다.
+이제 Google Analytics 연동은 끝났습니다. 보통 Hexo theme 은 Jade 이거나 Pub 파일일 것입니다. 크게 다르지 않을 것이나, 각자의 문법에 맞게 작성하면 연동은 무리 없이 잘 될 것입니다.
 
 다음 포스팅은 이제 Google Search 에 등록하는 법을 알아보겠습니다. 

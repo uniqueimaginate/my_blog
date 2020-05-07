@@ -30,7 +30,6 @@ tags: hexo, blog
     <code>hexo \<command></code>
 
 ex) Hexo 로 새로운 post 를 만드는 코드    
-
-    <code>hexo new 'post 이름'</code>
+<code>hexo new 'post 이름'</code>
 
 더 자세한 설명은 [Hexo Doc](https://hexo.io/docs/)에서 볼 수 있습니다.

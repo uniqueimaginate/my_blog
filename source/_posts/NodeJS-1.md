@@ -128,11 +128,3 @@ tags: Node.js, Node.js Core Modules
    <code>npm install nodemon -g</code>    
    위의 명령어로 nodemon package 를 OS 에 설치했습니다. MacOS, Linux 의 경우 Sudo 명령어를 이용해야 합니다.     
    nodemon package 는 일일히 terminal 에 <code>node app.js</code> 를 칠 필요가 없습니다. <code>nodemon app.js</code> 를 터미널에 치게 된다면 app.js 파일에 변동이 생길 때 마다 자동으로 변경 사항을 적용해서 터미널에 결과를 보이게 합니다. 굉장히 편하게 만들어주는 모듈입니다.
-7. argv 이용하기    
-   직접 해보세요
-   ```javascript
-   console.log(process.argv)
-   ```
-   ```javascript
-   console.log(process.argv[2])
-   ```

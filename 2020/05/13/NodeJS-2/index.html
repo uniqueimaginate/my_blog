@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="google-site-verification" content="xlKuwmUQsRwBTF8DTvKVwzOhGqqQq3W-hXCzC9YdCnQ"><title> NodeJS#2 · Peter's Blog</title><meta name="description" content="NodeJS#2 - Donguk Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/my_blog/favicon.png"><link rel="stylesheet" href="/my_blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://uniqueimaginate.github.io/my_blog/atom.xml" title="Peter's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/my_blog/atom.xml" title="Peter's Blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/my_blog/" class="logo-link"><img src="/my_blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/my_blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/my_blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/uniqueimaginate" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/my_blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">NodeJS#2</h1><div class="post-info">May 13, 2020</div><div class="post-content"><h1 id="Node-js-File-System-Notes-App-2"><a href="#Node-js-File-System-Notes-App-2" class="headerlink" title="Node.js File System (Notes App # 2)"></a>Node.js File System (Notes App # 2)</h1><h2 id="Node-js-파일-시스템과-커맨드라인-Argv-에-대한-글입니다"><a href="#Node-js-파일-시스템과-커맨드라인-Argv-에-대한-글입니다" class="headerlink" title="Node.js 파일 시스템과 커맨드라인 Argv 에 대한 글입니다."></a>Node.js 파일 시스템과 커맨드라인 Argv 에 대한 글입니다.</h2><a id="more"></a>
+
+<ol>
+<li><p>argv 이용하기<br>직접 해보세요</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(process.argv)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(process.argv[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<pre> >> node app.js peter</pre>
+<pre>// 저의 결과 입니다.
+// 각자의 local 환경에 따라 다릅니다.
+<code>console.log(process.argv)</code> 의 경우에는 아래의 3개의 줄이 나오겠지만
+<code>console.log(process.argv[2])</code> 의 경우에는 직접 입력한 peter 만 나올 것입니다.    
+
+ [
+ '/usr/local/bin/node',
+ '/Users/peter/Desktop/Study/NodeJS/Learn_NodeJS/notes-app/app.js',
+ 'peter'
+ ]
+</pre></li>
+<li><p>yargs package 이용하기<br>이 패키지는 args 를 더 편하게 이용 할 수 있게 하는 패키지 입니다.<br> 아래의 코드 결과를 비교해봅시다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(process.argv)</span><br><span class="line"><span class="built_in">console</span>.log(yargs.argv)</span><br></pre></td></tr></table></figure>
+<pre> >> node app.js
+ [
+ '/usr/local/bin/node',
+ '/Users/peter/Desktop/Study/NodeJS/Learn_NodeJS/notes-app/app.js'
+ ]
+ { _: [], '$0': 'app.js' }
+</pre>
+<p><code>console.log(process.argv)</code> 와는 다르게<br><code>console.log(yargs.argv)</code> 는 불필요한 것들을 보이지 않습니다.</p>
+<p>추가적인 기능도 있습니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yargs.command(&#123;</span><br><span class="line">    command: <span class="string">'add'</span>,</span><br><span class="line">    describe: <span class="string">'Add a new note'</span>,</span><br><span class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Adding a new note'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>위의 코드를 app.js 에 적습니다.<br>그 다음 실행해 봅니다.  </p>
+<pre> >> node app.js add
+ Adding a new note
+ { _: [ 'add' ], '$0': 'app.js' }
+ </pre>
+<p> 이러한 결과를 보일 수 있습니다. 즉, handler 에 자신이 원하는 함수를 넣어서 특정 기능을 수행 할 수 있습니다.</p>
+<p> 아래와 같은 기능도 있습니다.    </p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">yargs.command(&#123;</span><br><span class="line">    command: <span class="string">'add'</span>,</span><br><span class="line">    describe: <span class="string">'Add a new note'</span>,</span><br><span class="line">    builders: &#123;</span><br><span class="line">        title:&#123;</span><br><span class="line">            describe: <span class="string">'Note title'</span>,</span><br><span class="line">            demandOption: <span class="literal">true</span>,</span><br><span class="line">            type: <span class="string">'string'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        body:&#123;</span><br><span class="line">            describe: <span class="string">'Note body'</span>,</span><br><span class="line">            demandOption: <span class="literal">true</span>,</span><br><span class="line">            type: <span class="string">'string'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    handler: <span class="function"><span class="keyword">function</span>(<span class="params">argv</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Title: '</span> + argv.title)</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Body: '</span> + argv.body)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p> 위의 코드를 실행해 봅니다.</p>
+ <pre> >> node app.js add --title="This title" --body="This Body"
+  Title : This title
+  Body : This Body
+ </pre>
+<p> 위와 같이 yargs 를 사용해서 데이터를 저장할 수 있습니다.<br> 단지 위의 예시는 handler 에서 console 출력만을 진행한 예시입니다.</p>
+</li>
+<li><p>JSON 이용하기<br>JSON 을 공식문서를 통해 알아보자면 다음과 같습니다.<br><b>JSON (JavaScript Object Notation) is a lightweight data-interchange format.</b><br>굉장히 직관적이고 단순한 설명입니다.<br>바로 JSON 을 어떻게 사용하는지에 대해서 설명하겠습니다.<br><a href="https://www.json.org/json-en.html" target="_blank" rel="noopener">자세한 설명은 공식 홈페이지에 있습니다.</a></p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1-json.js 파일입니다.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 먼저 filesystem 사용을 선언합니다.</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 같은 폴더에 있는 1-json.json 파일을 읽어옵니다.</span></span><br><span class="line"><span class="keyword">const</span> dataBuffer = fs.readFileSync(<span class="string">'1-json.json'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// buffer 로 읽어오기 때문에 hex 로 표기 됩니다.</span></span><br><span class="line"><span class="comment">// 따라서 toString() 함수를 통해서 string 으로 변경합니다.</span></span><br><span class="line"><span class="keyword">const</span> dataJSON = dataBuffer.toString()</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSON 을 parsing 하는 단계를 거칩니다.</span></span><br><span class="line"><span class="keyword">const</span> user = <span class="built_in">JSON</span>.parse(dataJSON)</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSON 을 parsing 한 후에는 이렇게 수정할 수 있습니다.</span></span><br><span class="line">user.name = <span class="string">"Cali"</span></span><br><span class="line">user.age = <span class="number">50</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 수정이 끝난 후, 다시 JSON 으로 만들어줍니다.</span></span><br><span class="line">userJSON = <span class="built_in">JSON</span>.stringify(user)</span><br><span class="line"><span class="comment">// 수정 된 문자들이 1-json.json 으로 저장됩니다.</span></span><br><span class="line">fs.writeFileSync(<span class="string">'1-json.json'</span>, userJSON)</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1-json.json 파일입니다.</span></span><br><span class="line"><span class="comment">// 설명을 위해서 JSON 파일에 주석이 있다고 가정합니다.</span></span><br><span class="line"><span class="comment">// JSON 파일에는 주석을 사용하지 않는 것이 좋습니다.</span></span><br><span class="line">&#123;<span class="attr">"name"</span>:<span class="string">"peter"</span>,<span class="attr">"planet"</span>:<span class="string">"Earth"</span>,<span class="attr">"age"</span>:<span class="number">27</span>&#125;</span><br></pre></td></tr></table></figure>
+
+ <pre>
+ // 결과 1-json.json    
+ {"name":"Cali","planet":"Earth","age":50}
+ </pre></li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/my_blog/2020/05/12/NodeJS-1/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'https-uniqueimaginate-github-io-my-blog';
+var disqus_identifier = '2020/05/13/NodeJS-2/';
+var disqus_title = 'NodeJS#2';
+var disqus_url = 'https://uniqueimaginate.github.io/my_blog/2020/05/13/NodeJS-2/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//https-uniqueimaginate-github-io-my-blog.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://uniqueimaginate.github.io/my_blog">Donguk Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-164717783-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-164717783-1');</script></body></html>
